@@ -1,0 +1,107 @@
+.card-heading {
+    width: 127px;
+    height: 20px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.012em;
+    color: #1B1C21;
+}
+
+.card-price {
+    width: 35px;
+    height: 20px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.012em;
+    color: #1B1C21;
+    
+}
+
+.card-star {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 4px;
+    gap: 4px;
+    width: 45px;
+    height: 20px;
+    background: #F7F8FA;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25);
+    font-size: 12px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.card-min {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 4px;
+    gap: 4px;
+    height: 20px;
+    background: #F7F8FA;
+    border-radius: 5px;
+    font-size: 12px;
+    border: none;
+}
+
+.card-add {
+    background: #F3BA00;
+    border-radius: 5px;
+    height :20px;
+    width : 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-min-outer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 4px;
+    gap: 4px;
+    width: 65px;
+    height: 20px;
+    background: #BEBEBE;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding: 346px 241px;
+    gap: 55px;
+    position: absolute;
+    left: 52px;
+    top: 137px;
+    width: 56vw;
+    background: #F7F8FA;
+    border-radius: 20px;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  

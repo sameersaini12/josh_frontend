@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/index.css">
+    <title>Custum Cart</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+            'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+            sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background-color:rgb(234,237,237);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="" style="background : #1AC073; height : 800px; color: white; padding: 28px 131px 0 131px; ">
+
+        <!--  NAVBAR   -->
+        <div style="display: flex; flex-direction: row; justify-content: space-between">
+            <div style="width: 89px;
+            height: 20px;
+            font-family: 'Squada One';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 32px;
+            line-height: 20px;
+            letter-spacing: -0.012em;
+            color: #FFFFFF;">
+                JTGeats
+            </div>
+
+            <div style="
+            display: flex;
+            justify-content: space-between;
+            width: 33%;
+            ">
+            <!-- baad me dekh lena-->
+                <div>
+                    Home
+                </div>
+                <div>
+                    About
+                </div>
+                <div>
+                    Menu
+                </div>
+                <div>
+                    Blog
+                </div>
+                <div>
+                    Contact
+                </div>
+            </div>
+            <div style="display: flex;">
+                <div>
+                    <img style="cursor: pointer; margin-right: 30px;" src="./icons/Search.svg" />                       
+                </div>
+                <div>
+                    <img id="openCart" style="cursor: pointer;" src="./icons/Cart.svg" />                        
+                </div>
+            </div>
+        </div>
+
+        <div id="cartModal" class="modal">
+            <div class="modal-content">
+                <img src="./icons/Cart.svg" />
+                <button class="close">Back to menu</button>
+            </div>
+        </div>
+
+        <!-- HOME PAGE  -->
+
+        <div style="display: flex;" >
+            <div style="width: 50%; margin-top: 210px;">
+                <div style="width: 534px;
+                height: 147px;
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 70px;
+                line-height: 82px;
+                color: #FFFFFF;
+                flex: none;
+                order: 0;
+                flex-grow: 0;
+                ">
+                    Authentic Home food in India
+                </div>
+                <div style="width: 441px;
+                height: 40px;
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 20px;
+                letter-spacing: -0.012em;
+                color: #FFFFFF;
+                margin-top: 32px;
+                flex: none;
+                order: 1;
+                flex-grow: 0;
+                ">
+                    JTGeats is a courier service in which authentic home cook food is delivered to a customer.
+                </div>
+                <div style="margin-top: 40px;">
+                    <input style="width: 286px; height : 58px; padding: 0 0 0 20px; outline: none; border-radius: 10px 0px 0px 10px; border: none;" type="text" placeholder="Search food you love">
+                    <button style="height: 58px; margin-left: -10px; background: #F3BA00; border-radius: 0px 10px 10px 0px; border : none; width : 112px; color : white; cursor: pointer; " >Search</button>
+                </div>
+            </div>
+            <div style="margin-top: 210px;">
+                <img src="./icons/cooking.svg" />
+            </div>
+        </div>
+    </div>
+
+    <!-- KITCHEN PAGE -->
+
+    <div style="padding: 28px 131px 0 131px; background: #F7F8FA;">
+        <div style="width: 250px;
+        height: 24px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 40px;
+        line-height: 24px;
+        letter-spacing: -0.012em;
+        color: #000000;
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+        margin-top: 105px;
+        ">
+            Home Kitchen
+        </div>
+        <div style="display: flex; margin-top: 40px;">
+            <div style="padding: 13px 40px 13px 40px ; color: #929292; background: #F3BA00;
+            border: 1px solid #F3BA00;
+            border-radius: 10px 0px 0px 10px;
+            color : black;">
+                All
+            </div>
+            <div style="padding: 13px 40px 13px 40px ; color: #929292; border: 1px solid #F3BA00;">
+                New 
+            </div>
+            <div style="padding: 13px 40px 13px 40px ; color: #929292; border: 1px solid #F3BA00;">
+                Free delivery 
+            </div>
+            <div style="padding: 13px 40px 13px 40px ; color: #929292; border: 1px solid #F3BA00;">
+                Offers
+            </div>
+            <div style="padding: 13px 40px 13px 40px ; color: #929292; border: 1px solid #F3BA00; border-radius: 0px 10px 10px 0px;">
+                Coming
+            </div>
+        </div>
+        
+        <div>
+            <div style="margin-top: 30px; display: flex; justify-content: space-between;">
+                <div style="width: 250px;">
+                    <div>
+                        <img src="./images/unsplash_60nzTP7_hMQ.png" style="height :250px; width: 250px;" />                             
+                    </div>
+                    <div style="padding: 15.5px; background-color: white; box-shadow: 0px 0px 1px rgba(187, 187, 187, 0.25);
+                    border-radius: 0px 0px 10px 10px;">
+                        <div style="display: flex; justify-content : space-between">
+                            <div class="card-heading">
+                                Home made pizza
+                            </div>
+                            <div class="card-price" >
+                                ₹190
+                            </div>
+                        </div>
+                        <div style="margin-top: 16px;">
+                            <div style="display: flex; flex-direction: row; justify-content : space-between">
+                                <div style="display: flex;;">
+                                    <button class="card-star" >
+                                    <span>
+                                        <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.1121 4.72554L8.51478 4.17806L6.90666 0.764102C6.86274 0.670629 6.79048 0.594961 6.70122 0.548967C6.47736 0.43324 6.20532 0.529679 6.09339 0.764102L4.48528 4.17806L0.88791 4.72554C0.788731 4.74038 0.698053 4.78934 0.628627 4.86352C0.544696 4.95386 0.498446 5.0754 0.50004 5.20142C0.501634 5.32745 0.550942 5.44766 0.637128 5.53563L3.23987 8.19291L2.62496 11.9452C2.61054 12.0324 2.61976 12.1222 2.65159 12.2043C2.68341 12.2864 2.73655 12.3575 2.805 12.4095C2.87344 12.4616 2.95444 12.4925 3.03882 12.4988C3.1232 12.5051 3.20757 12.4865 3.28238 12.4452L6.50003 10.6736L9.71768 12.4452C9.80553 12.4941 9.90754 12.5104 10.0053 12.4926C10.2518 12.4481 10.4176 12.2033 10.3751 11.9452L9.76019 8.19291L12.3629 5.53563C12.4338 5.46293 12.4805 5.36798 12.4947 5.26412C12.533 5.00447 12.3601 4.76412 12.1121 4.72554Z" fill="#1B1C21"/>
+                                    </svg>
+                                        </span>4.7</button>
+                                    <div class="card-min-outer">
+                                        <button class="card-min">50-79 min</button>
+                                    </div>
+                                </div>
+                                <div class="card-add">
+                                    <svg style="left: 25.23%;
+                                    right: 24.32%;
+                                    top: 23.53%;
+                                    bottom: 21.57%;
+                                    " width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.59911 7.69607V13.1863M2.04956 7.69607H7.59911H2.04956ZM13.1487 7.69607H7.59911H13.1487ZM7.59911 7.69607V2.20587V7.69607Z" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>                                        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="width: 250px;">
+                    <div>
+                        <img src="./images/unsplash_CbNAuxSZTFo.png" style="height :250px; width: 250px;" />                             
+                    </div>
+                    <div style="padding: 15.5px; background-color: white; box-shadow: 0px 0px 1px rgba(187, 187, 187, 0.25);
+                    border-radius: 0px 0px 10px 10px;">
+                        <div style="display: flex; justify-content : space-between">
+                            <div class="card-heading">
+                                Home made pizza
+                            </div>
+                            <div class="card-price" >
+                                ₹190
+                            </div>
+                        </div>
+                        <div style="margin-top: 16px;">
+                            <div style="display: flex; flex-direction: row; justify-content : space-between">
+                                <div style="display: flex;;">
+                                    <button class="card-star" >
+                                    <span>
+                                        <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.1121 4.72554L8.51478 4.17806L6.90666 0.764102C6.86274 0.670629 6.79048 0.594961 6.70122 0.548967C6.47736 0.43324 6.20532 0.529679 6.09339 0.764102L4.48528 4.17806L0.88791 4.72554C0.788731 4.74038 0.698053 4.78934 0.628627 4.86352C0.544696 4.95386 0.498446 5.0754 0.50004 5.20142C0.501634 5.32745 0.550942 5.44766 0.637128 5.53563L3.23987 8.19291L2.62496 11.9452C2.61054 12.0324 2.61976 12.1222 2.65159 12.2043C2.68341 12.2864 2.73655 12.3575 2.805 12.4095C2.87344 12.4616 2.95444 12.4925 3.03882 12.4988C3.1232 12.5051 3.20757 12.4865 3.28238 12.4452L6.50003 10.6736L9.71768 12.4452C9.80553 12.4941 9.90754 12.5104 10.0053 12.4926C10.2518 12.4481 10.4176 12.2033 10.3751 11.9452L9.76019 8.19291L12.3629 5.53563C12.4338 5.46293 12.4805 5.36798 12.4947 5.26412C12.533 5.00447 12.3601 4.76412 12.1121 4.72554Z" fill="#1B1C21"/>
+                                    </svg>
+                                        </span>4.7</button>
+                                    <div class="card-min-outer">
+                                        <button class="card-min">50-79 min</button>
+                                    </div>
+                                </div>
+                                <div class="card-add">
+                                    <svg style="left: 25.23%;
+                                    right: 24.32%;
+                                    top: 23.53%;
+                                    bottom: 21.57%;
+                                    " width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.59911 7.69607V13.1863M2.04956 7.69607H7.59911H2.04956ZM13.1487 7.69607H7.59911H13.1487ZM7.59911 7.69607V2.20587V7.69607Z" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>                                        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="width: 250px;">
+                    <div>
+                        <img src="./images/unsplash_33GPuoFI7v8.png" style="height :250px; width: 250px;" />                             
+                    </div>
+                    <div style="padding: 15.5px; background-color: white; box-shadow: 0px 0px 1px rgba(187, 187, 187, 0.25);
+                    border-radius: 0px 0px 10px 10px;">
+                        <div style="display: flex; justify-content : space-between">
+                            <div class="card-heading">
+                                Home made pizza
+                            </div>
+                            <div class="card-price" >
+                                ₹190
+                            </div>
+                        </div>
+                        <div style="margin-top: 16px;">
+                            <div style="display: flex; flex-direction: row; justify-content : space-between">
+                                <div style="display: flex;;">
+                                    <button class="card-star" >
+                                    <span>
+                                        <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.1121 4.72554L8.51478 4.17806L6.90666 0.764102C6.86274 0.670629 6.79048 0.594961 6.70122 0.548967C6.47736 0.43324 6.20532 0.529679 6.09339 0.764102L4.48528 4.17806L0.88791 4.72554C0.788731 4.74038 0.698053 4.78934 0.628627 4.86352C0.544696 4.95386 0.498446 5.0754 0.50004 5.20142C0.501634 5.32745 0.550942 5.44766 0.637128 5.53563L3.23987 8.19291L2.62496 11.9452C2.61054 12.0324 2.61976 12.1222 2.65159 12.2043C2.68341 12.2864 2.73655 12.3575 2.805 12.4095C2.87344 12.4616 2.95444 12.4925 3.03882 12.4988C3.1232 12.5051 3.20757 12.4865 3.28238 12.4452L6.50003 10.6736L9.71768 12.4452C9.80553 12.4941 9.90754 12.5104 10.0053 12.4926C10.2518 12.4481 10.4176 12.2033 10.3751 11.9452L9.76019 8.19291L12.3629 5.53563C12.4338 5.46293 12.4805 5.36798 12.4947 5.26412C12.533 5.00447 12.3601 4.76412 12.1121 4.72554Z" fill="#1B1C21"/>
+                                    </svg>
+                                        </span>4.7</button>
+                                    <div class="card-min-outer">
+                                        <button class="card-min">50-79 min</button>
+                                    </div>
+                                </div>
+                                <div class="card-add">
+                                    <svg style="left: 25.23%;
+                                    right: 24.32%;
+                                    top: 23.53%;
+                                    bottom: 21.57%;
+                                    " width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.59911 7.69607V13.1863M2.04956 7.69607H7.59911H2.04956ZM13.1487 7.69607H7.59911H13.1487ZM7.59911 7.69607V2.20587V7.69607Z" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>                                        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="width: 250px;">
+                    <div>
+                        <img src="./images/unsplash_MqT0asuoIcU.png" style="height :250px; width: 250px;" />                             
+                    </div>
+                    <div style="padding: 15.5px; background-color: white; box-shadow: 0px 0px 1px rgba(187, 187, 187, 0.25);
+                    border-radius: 0px 0px 10px 10px;">
+                        <div style="display: flex; justify-content : space-between">
+                            <div class="card-heading">
+                                Home made pizza
+                            </div>
+                            <div class="card-price" >
+                                ₹190
+                            </div>
+                        </div>
+                        <div style="margin-top: 16px;">
+                            <div style="display: flex; flex-direction: row; justify-content : space-between">
+                                <div style="display: flex;;">
+                                    <button class="card-star" >
+                                    <span>
+                                        <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.1121 4.72554L8.51478 4.17806L6.90666 0.764102C6.86274 0.670629 6.79048 0.594961 6.70122 0.548967C6.47736 0.43324 6.20532 0.529679 6.09339 0.764102L4.48528 4.17806L0.88791 4.72554C0.788731 4.74038 0.698053 4.78934 0.628627 4.86352C0.544696 4.95386 0.498446 5.0754 0.50004 5.20142C0.501634 5.32745 0.550942 5.44766 0.637128 5.53563L3.23987 8.19291L2.62496 11.9452C2.61054 12.0324 2.61976 12.1222 2.65159 12.2043C2.68341 12.2864 2.73655 12.3575 2.805 12.4095C2.87344 12.4616 2.95444 12.4925 3.03882 12.4988C3.1232 12.5051 3.20757 12.4865 3.28238 12.4452L6.50003 10.6736L9.71768 12.4452C9.80553 12.4941 9.90754 12.5104 10.0053 12.4926C10.2518 12.4481 10.4176 12.2033 10.3751 11.9452L9.76019 8.19291L12.3629 5.53563C12.4338 5.46293 12.4805 5.36798 12.4947 5.26412C12.533 5.00447 12.3601 4.76412 12.1121 4.72554Z" fill="#1B1C21"/>
+                                    </svg>
+                                        </span>4.7</button>
+                                    <div class="card-min-outer">
+                                        <button class="card-min">50-79 min</button>
+                                    </div>
+                                </div>
+                                <div class="card-add">
+                                    <svg style="left: 25.23%;
+                                    right: 24.32%;
+                                    top: 23.53%;
+                                    bottom: 21.57%;
+                                    " width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.59911 7.69607V13.1863M2.04956 7.69607H7.59911H2.04956ZM13.1487 7.69607H7.59911H13.1487ZM7.59911 7.69607V2.20587V7.69607Z" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>                                        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div style="margin-top: 30px; display: flex; justify-content: space-between;">
+                <div style="width: 250px;">
+                    <div>
+                        <img src="./images/unsplash_60nzTP7_hMQ.png" style="height :250px; width: 250px;" />                             
+                    </div>
+                    <div style="padding: 15.5px; background-color: white; box-shadow: 0px 0px 1px rgba(187, 187, 187, 0.25);
+                    border-radius: 0px 0px 10px 10px;">
+                        <div style="display: flex; justify-content : space-between">
+                            <div class="card-heading">
+                                Home made pizza
+                            </div>
+                            <div class="card-price" >
+                                ₹190
+                            </div>
+                        </div>
+                        <div style="margin-top: 16px;">
+                            <div style="display: flex; flex-direction: row; justify-content : space-between">
+                                <div style="display: flex;;">
+                                    <button class="card-star" >
+                                    <span>
+                                        <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.1121 4.72554L8.51478 4.17806L6.90666 0.764102C6.86274 0.670629 6.79048 0.594961 6.70122 0.548967C6.47736 0.43324 6.20532 0.529679 6.09339 0.764102L4.48528 4.17806L0.88791 4.72554C0.788731 4.74038 0.698053 4.78934 0.628627 4.86352C0.544696 4.95386 0.498446 5.0754 0.50004 5.20142C0.501634 5.32745 0.550942 5.44766 0.637128 5.53563L3.23987 8.19291L2.62496 11.9452C2.61054 12.0324 2.61976 12.1222 2.65159 12.2043C2.68341 12.2864 2.73655 12.3575 2.805 12.4095C2.87344 12.4616 2.95444 12.4925 3.03882 12.4988C3.1232 12.5051 3.20757 12.4865 3.28238 12.4452L6.50003 10.6736L9.71768 12.4452C9.80553 12.4941 9.90754 12.5104 10.0053 12.4926C10.2518 12.4481 10.4176 12.2033 10.3751 11.9452L9.76019 8.19291L12.3629 5.53563C12.4338 5.46293 12.4805 5.36798 12.4947 5.26412C12.533 5.00447 12.3601 4.76412 12.1121 4.72554Z" fill="#1B1C21"/>
+                                    </svg>
+                                        </span>4.7</button>
+                                    <div class="card-min-outer">
+                                        <button class="card-min">50-79 min</button>
+                                    </div>
+                                </div>
+                                <div class="card-add">
+                                    <svg style="left: 25.23%;
+                                    right: 24.32%;
+                                    top: 23.53%;
+                                    bottom: 21.57%;
+                                    " width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.59911 7.69607V13.1863M2.04956 7.69607H7.59911H2.04956ZM13.1487 7.69607H7.59911H13.1487ZM7.59911 7.69607V2.20587V7.69607Z" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>                                        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="width: 250px;">
+                    <div>
+                        <img src="./images/unsplash_CbNAuxSZTFo.png" style="height :250px; width: 250px;" />                             
+                    </div>
+                    <div style="padding: 15.5px; background-color: white; box-shadow: 0px 0px 1px rgba(187, 187, 187, 0.25);
+                    border-radius: 0px 0px 10px 10px;">
+                        <div style="display: flex; justify-content : space-between">
+                            <div class="card-heading">
+                                Home made pizza
+                            </div>
+                            <div class="card-price" >
+                                ₹190
+                            </div>
+                        </div>
+                        <div style="margin-top: 16px;">
+                            <div style="display: flex; flex-direction: row; justify-content : space-between">
+                                <div style="display: flex;;">
+                                    <button class="card-star" >
+                                    <span>
+                                        <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.1121 4.72554L8.51478 4.17806L6.90666 0.764102C6.86274 0.670629 6.79048 0.594961 6.70122 0.548967C6.47736 0.43324 6.20532 0.529679 6.09339 0.764102L4.48528 4.17806L0.88791 4.72554C0.788731 4.74038 0.698053 4.78934 0.628627 4.86352C0.544696 4.95386 0.498446 5.0754 0.50004 5.20142C0.501634 5.32745 0.550942 5.44766 0.637128 5.53563L3.23987 8.19291L2.62496 11.9452C2.61054 12.0324 2.61976 12.1222 2.65159 12.2043C2.68341 12.2864 2.73655 12.3575 2.805 12.4095C2.87344 12.4616 2.95444 12.4925 3.03882 12.4988C3.1232 12.5051 3.20757 12.4865 3.28238 12.4452L6.50003 10.6736L9.71768 12.4452C9.80553 12.4941 9.90754 12.5104 10.0053 12.4926C10.2518 12.4481 10.4176 12.2033 10.3751 11.9452L9.76019 8.19291L12.3629 5.53563C12.4338 5.46293 12.4805 5.36798 12.4947 5.26412C12.533 5.00447 12.3601 4.76412 12.1121 4.72554Z" fill="#1B1C21"/>
+                                    </svg>
+                                        </span>4.7</button>
+                                    <div class="card-min-outer">
+                                        <button class="card-min">50-79 min</button>
+                                    </div>
+                                </div>
+                                <div class="card-add">
+                                    <svg style="left: 25.23%;
+                                    right: 24.32%;
+                                    top: 23.53%;
+                                    bottom: 21.57%;
+                                    " width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.59911 7.69607V13.1863M2.04956 7.69607H7.59911H2.04956ZM13.1487 7.69607H7.59911H13.1487ZM7.59911 7.69607V2.20587V7.69607Z" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>                                        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="width: 250px;">
+                    <div>
+                        <img src="./images/unsplash_33GPuoFI7v8.png" style="height :250px; width: 250px;" />                             
+                    </div>
+                    <div style="padding: 15.5px; background-color: white; box-shadow: 0px 0px 1px rgba(187, 187, 187, 0.25);
+                    border-radius: 0px 0px 10px 10px;">
+                        <div style="display: flex; justify-content : space-between">
+                            <div class="card-heading">
+                                Home made pizza
+                            </div>
+                            <div class="card-price" >
+                                ₹190
+                            </div>
+                        </div>
+                        <div style="margin-top: 16px;">
+                            <div style="display: flex; flex-direction: row; justify-content : space-between">
+                                <div style="display: flex;;">
+                                    <button class="card-star" >
+                                    <span>
+                                        <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.1121 4.72554L8.51478 4.17806L6.90666 0.764102C6.86274 0.670629 6.79048 0.594961 6.70122 0.548967C6.47736 0.43324 6.20532 0.529679 6.09339 0.764102L4.48528 4.17806L0.88791 4.72554C0.788731 4.74038 0.698053 4.78934 0.628627 4.86352C0.544696 4.95386 0.498446 5.0754 0.50004 5.20142C0.501634 5.32745 0.550942 5.44766 0.637128 5.53563L3.23987 8.19291L2.62496 11.9452C2.61054 12.0324 2.61976 12.1222 2.65159 12.2043C2.68341 12.2864 2.73655 12.3575 2.805 12.4095C2.87344 12.4616 2.95444 12.4925 3.03882 12.4988C3.1232 12.5051 3.20757 12.4865 3.28238 12.4452L6.50003 10.6736L9.71768 12.4452C9.80553 12.4941 9.90754 12.5104 10.0053 12.4926C10.2518 12.4481 10.4176 12.2033 10.3751 11.9452L9.76019 8.19291L12.3629 5.53563C12.4338 5.46293 12.4805 5.36798 12.4947 5.26412C12.533 5.00447 12.3601 4.76412 12.1121 4.72554Z" fill="#1B1C21"/>
+                                    </svg>
+                                        </span>4.7</button>
+                                    <div class="card-min-outer">
+                                        <button class="card-min">50-79 min</button>
+                                    </div>
+                                </div>
+                                <div class="card-add">
+                                    <svg style="left: 25.23%;
+                                    right: 24.32%;
+                                    top: 23.53%;
+                                    bottom: 21.57%;
+                                    " width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.59911 7.69607V13.1863M2.04956 7.69607H7.59911H2.04956ZM13.1487 7.69607H7.59911H13.1487ZM7.59911 7.69607V2.20587V7.69607Z" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>                                        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="width: 250px;">
+                    <div>
+                        <img src="./images/unsplash_MqT0asuoIcU.png" style="height :250px; width: 250px;" />                             
+                    </div>
+                    <div style="padding: 15.5px; background-color: white; box-shadow: 0px 0px 1px rgba(187, 187, 187, 0.25);
+                    border-radius: 0px 0px 10px 10px;">
+                        <div style="display: flex; justify-content : space-between">
+                            <div class="card-heading">
+                                Home made pizza
+                            </div>
+                            <div class="card-price" >
+                                ₹190
+                            </div>
+                        </div>
+                        <div style="margin-top: 16px;">
+                            <div style="display: flex; flex-direction: row; justify-content : space-between">
+                                <div style="display: flex;;">
+                                    <button class="card-star" >
+                                    <span>
+                                        <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.1121 4.72554L8.51478 4.17806L6.90666 0.764102C6.86274 0.670629 6.79048 0.594961 6.70122 0.548967C6.47736 0.43324 6.20532 0.529679 6.09339 0.764102L4.48528 4.17806L0.88791 4.72554C0.788731 4.74038 0.698053 4.78934 0.628627 4.86352C0.544696 4.95386 0.498446 5.0754 0.50004 5.20142C0.501634 5.32745 0.550942 5.44766 0.637128 5.53563L3.23987 8.19291L2.62496 11.9452C2.61054 12.0324 2.61976 12.1222 2.65159 12.2043C2.68341 12.2864 2.73655 12.3575 2.805 12.4095C2.87344 12.4616 2.95444 12.4925 3.03882 12.4988C3.1232 12.5051 3.20757 12.4865 3.28238 12.4452L6.50003 10.6736L9.71768 12.4452C9.80553 12.4941 9.90754 12.5104 10.0053 12.4926C10.2518 12.4481 10.4176 12.2033 10.3751 11.9452L9.76019 8.19291L12.3629 5.53563C12.4338 5.46293 12.4805 5.36798 12.4947 5.26412C12.533 5.00447 12.3601 4.76412 12.1121 4.72554Z" fill="#1B1C21"/>
+                                    </svg>
+                                        </span>4.7</button>
+                                    <div class="card-min-outer">
+                                        <button class="card-min">50-79 min</button>
+                                    </div>
+                                </div>
+                                <div class="card-add">
+                                    <svg style="left: 25.23%;
+                                    right: 24.32%;
+                                    top: 23.53%;
+                                    bottom: 21.57%;
+                                    " width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.59911 7.69607V13.1863M2.04956 7.69607H7.59911H2.04956ZM13.1487 7.69607H7.59911H13.1487ZM7.59911 7.69607V2.20587V7.69607Z" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>                                        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 30px; display: flex; justify-content: space-between;">
+                <div style="width: 250px;">
+                    <div>
+                        <img src="./images/unsplash_60nzTP7_hMQ.png" style="height :250px; width: 250px;" />                             
+                    </div>
+                    <div style="padding: 15.5px; background-color: white; box-shadow: 0px 0px 1px rgba(187, 187, 187, 0.25);
+                    border-radius: 0px 0px 10px 10px;">
+                        <div style="display: flex; justify-content : space-between">
+                            <div class="card-heading">
+                                Home made pizza
+                            </div>
+                            <div class="card-price" >
+                                ₹190
+                            </div>
+                        </div>
+                        <div style="margin-top: 16px;">
+                            <div style="display: flex; flex-direction: row; justify-content : space-between">
+                                <div style="display: flex;;">
+                                    <button class="card-star" >
+                                    <span>
+                                        <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.1121 4.72554L8.51478 4.17806L6.90666 0.764102C6.86274 0.670629 6.79048 0.594961 6.70122 0.548967C6.47736 0.43324 6.20532 0.529679 6.09339 0.764102L4.48528 4.17806L0.88791 4.72554C0.788731 4.74038 0.698053 4.78934 0.628627 4.86352C0.544696 4.95386 0.498446 5.0754 0.50004 5.20142C0.501634 5.32745 0.550942 5.44766 0.637128 5.53563L3.23987 8.19291L2.62496 11.9452C2.61054 12.0324 2.61976 12.1222 2.65159 12.2043C2.68341 12.2864 2.73655 12.3575 2.805 12.4095C2.87344 12.4616 2.95444 12.4925 3.03882 12.4988C3.1232 12.5051 3.20757 12.4865 3.28238 12.4452L6.50003 10.6736L9.71768 12.4452C9.80553 12.4941 9.90754 12.5104 10.0053 12.4926C10.2518 12.4481 10.4176 12.2033 10.3751 11.9452L9.76019 8.19291L12.3629 5.53563C12.4338 5.46293 12.4805 5.36798 12.4947 5.26412C12.533 5.00447 12.3601 4.76412 12.1121 4.72554Z" fill="#1B1C21"/>
+                                    </svg>
+                                        </span>4.7</button>
+                                    <div class="card-min-outer">
+                                        <button class="card-min">50-79 min</button>
+                                    </div>
+                                </div>
+                                <div class="card-add">
+                                    <svg style="left: 25.23%;
+                                    right: 24.32%;
+                                    top: 23.53%;
+                                    bottom: 21.57%;
+                                    " width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.59911 7.69607V13.1863M2.04956 7.69607H7.59911H2.04956ZM13.1487 7.69607H7.59911H13.1487ZM7.59911 7.69607V2.20587V7.69607Z" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>                                        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="width: 250px;">
+                    <div>
+                        <img src="./images/unsplash_CbNAuxSZTFo.png" style="height :250px; width: 250px;" />                             
+                    </div>
+                    <div style="padding: 15.5px; background-color: white; box-shadow: 0px 0px 1px rgba(187, 187, 187, 0.25);
+                    border-radius: 0px 0px 10px 10px;">
+                        <div style="display: flex; justify-content : space-between">
+                            <div class="card-heading">
+                                Home made pizza
+                            </div>
+                            <div class="card-price" >
+                                ₹190
+                            </div>
+                        </div>
+                        <div style="margin-top: 16px;">
+                            <div style="display: flex; flex-direction: row; justify-content : space-between">
+                                <div style="display: flex;;">
+                                    <button class="card-star" >
+                                    <span>
+                                        <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.1121 4.72554L8.51478 4.17806L6.90666 0.764102C6.86274 0.670629 6.79048 0.594961 6.70122 0.548967C6.47736 0.43324 6.20532 0.529679 6.09339 0.764102L4.48528 4.17806L0.88791 4.72554C0.788731 4.74038 0.698053 4.78934 0.628627 4.86352C0.544696 4.95386 0.498446 5.0754 0.50004 5.20142C0.501634 5.32745 0.550942 5.44766 0.637128 5.53563L3.23987 8.19291L2.62496 11.9452C2.61054 12.0324 2.61976 12.1222 2.65159 12.2043C2.68341 12.2864 2.73655 12.3575 2.805 12.4095C2.87344 12.4616 2.95444 12.4925 3.03882 12.4988C3.1232 12.5051 3.20757 12.4865 3.28238 12.4452L6.50003 10.6736L9.71768 12.4452C9.80553 12.4941 9.90754 12.5104 10.0053 12.4926C10.2518 12.4481 10.4176 12.2033 10.3751 11.9452L9.76019 8.19291L12.3629 5.53563C12.4338 5.46293 12.4805 5.36798 12.4947 5.26412C12.533 5.00447 12.3601 4.76412 12.1121 4.72554Z" fill="#1B1C21"/>
+                                    </svg>
+                                        </span>4.7</button>
+                                    <div class="card-min-outer">
+                                        <button class="card-min">50-79 min</button>
+                                    </div>
+                                </div>
+                                <div class="card-add">
+                                    <svg style="left: 25.23%;
+                                    right: 24.32%;
+                                    top: 23.53%;
+                                    bottom: 21.57%;
+                                    " width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.59911 7.69607V13.1863M2.04956 7.69607H7.59911H2.04956ZM13.1487 7.69607H7.59911H13.1487ZM7.59911 7.69607V2.20587V7.69607Z" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>                                        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="width: 250px;">
+                    <div>
+                        <img src="./images/unsplash_33GPuoFI7v8.png" style="height :250px; width: 250px;" />                             
+                    </div>
+                    <div style="padding: 15.5px; background-color: white; box-shadow: 0px 0px 1px rgba(187, 187, 187, 0.25);
+                    border-radius: 0px 0px 10px 10px;">
+                        <div style="display: flex; justify-content : space-between">
+                            <div class="card-heading">
+                                Home made pizza
+                            </div>
+                            <div class="card-price" >
+                                ₹190
+                            </div>
+                        </div>
+                        <div style="margin-top: 16px;">
+                            <div style="display: flex; flex-direction: row; justify-content : space-between">
+                                <div style="display: flex;;">
+                                    <button class="card-star" >
+                                    <span>
+                                        <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.1121 4.72554L8.51478 4.17806L6.90666 0.764102C6.86274 0.670629 6.79048 0.594961 6.70122 0.548967C6.47736 0.43324 6.20532 0.529679 6.09339 0.764102L4.48528 4.17806L0.88791 4.72554C0.788731 4.74038 0.698053 4.78934 0.628627 4.86352C0.544696 4.95386 0.498446 5.0754 0.50004 5.20142C0.501634 5.32745 0.550942 5.44766 0.637128 5.53563L3.23987 8.19291L2.62496 11.9452C2.61054 12.0324 2.61976 12.1222 2.65159 12.2043C2.68341 12.2864 2.73655 12.3575 2.805 12.4095C2.87344 12.4616 2.95444 12.4925 3.03882 12.4988C3.1232 12.5051 3.20757 12.4865 3.28238 12.4452L6.50003 10.6736L9.71768 12.4452C9.80553 12.4941 9.90754 12.5104 10.0053 12.4926C10.2518 12.4481 10.4176 12.2033 10.3751 11.9452L9.76019 8.19291L12.3629 5.53563C12.4338 5.46293 12.4805 5.36798 12.4947 5.26412C12.533 5.00447 12.3601 4.76412 12.1121 4.72554Z" fill="#1B1C21"/>
+                                    </svg>
+                                        </span>4.7</button>
+                                    <div class="card-min-outer">
+                                        <button class="card-min">50-79 min</button>
+                                    </div>
+                                </div>
+                                <div class="card-add">
+                                    <svg style="left: 25.23%;
+                                    right: 24.32%;
+                                    top: 23.53%;
+                                    bottom: 21.57%;
+                                    " width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.59911 7.69607V13.1863M2.04956 7.69607H7.59911H2.04956ZM13.1487 7.69607H7.59911H13.1487ZM7.59911 7.69607V2.20587V7.69607Z" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>                                        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="width: 250px;">
+                    <div>
+                        <img src="./images/unsplash_MqT0asuoIcU.png" style="height :250px; width: 250px;" />                             
+                    </div>
+                    <div style="padding: 15.5px; background-color: white; box-shadow: 0px 0px 1px rgba(187, 187, 187, 0.25);
+                    border-radius: 0px 0px 10px 10px;">
+                        <div style="display: flex; justify-content : space-between">
+                            <div class="card-heading">
+                                Home made pizza
+                            </div>
+                            <div class="card-price" >
+                                ₹190
+                            </div>
+                        </div>
+                        <div style="margin-top: 16px;">
+                            <div style="display: flex; flex-direction: row; justify-content : space-between">
+                                <div style="display: flex;;">
+                                    <button class="card-star" >
+                                    <span>
+                                        <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.1121 4.72554L8.51478 4.17806L6.90666 0.764102C6.86274 0.670629 6.79048 0.594961 6.70122 0.548967C6.47736 0.43324 6.20532 0.529679 6.09339 0.764102L4.48528 4.17806L0.88791 4.72554C0.788731 4.74038 0.698053 4.78934 0.628627 4.86352C0.544696 4.95386 0.498446 5.0754 0.50004 5.20142C0.501634 5.32745 0.550942 5.44766 0.637128 5.53563L3.23987 8.19291L2.62496 11.9452C2.61054 12.0324 2.61976 12.1222 2.65159 12.2043C2.68341 12.2864 2.73655 12.3575 2.805 12.4095C2.87344 12.4616 2.95444 12.4925 3.03882 12.4988C3.1232 12.5051 3.20757 12.4865 3.28238 12.4452L6.50003 10.6736L9.71768 12.4452C9.80553 12.4941 9.90754 12.5104 10.0053 12.4926C10.2518 12.4481 10.4176 12.2033 10.3751 11.9452L9.76019 8.19291L12.3629 5.53563C12.4338 5.46293 12.4805 5.36798 12.4947 5.26412C12.533 5.00447 12.3601 4.76412 12.1121 4.72554Z" fill="#1B1C21"/>
+                                    </svg>
+                                        </span>4.7</button>
+                                    <div class="card-min-outer">
+                                        <button class="card-min">50-79 min</button>
+                                    </div>
+                                </div>
+                                <div class="card-add">
+                                    <svg style="left: 25.23%;
+                                    right: 24.32%;
+                                    top: 23.53%;
+                                    bottom: 21.57%;
+                                    " width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.59911 7.69607V13.1863M2.04956 7.69607H7.59911H2.04956ZM13.1487 7.69607H7.59911H13.1487ZM7.59911 7.69607V2.20587V7.69607Z" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>                                        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="display: flex; justify-content: center; align-items: center; flex-direction : column">
+                <div style="margin-top: 150px; width: 427px;
+                height: 36px;
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 800;
+                font-size: 40px;
+                line-height: 20px;
+                text-align: center;
+                letter-spacing: -0.012em;
+                margin-bottom: 37px;
+                ">Popular Items</div>
+
+                <div style="display: flex; justify-content : space-between; width:100%">
+                    <div style="display: flex; justify-content : center; align-items: center;">
+                        <img src="./icons/play.svg" style="transform: rotate(180deg);"/>                          
+                    </div>
+                    <div>
+                        <div style="width: 250px;">
+                            <div>
+                                <img src="./images/unsplash_60nzTP7_hMQ.png" style="height :250px; width: 250px;" />                             
+                            </div>
+                            <div style="padding: 15.5px; background-color: white; box-shadow: 0px 0px 1px rgba(187, 187, 187, 0.25);
+                            border-radius: 0px 0px 10px 10px;">
+                                <div style="display: flex; justify-content : space-between">
+                                    <div class="card-heading">
+                                        Home made pizza
+                                    </div>
+                                    <div class="card-price" >
+                                        ₹190
+                                    </div>
+                                </div>
+                                <div style="margin-top: 16px;">
+                                    <div style="display: flex; flex-direction: row; justify-content : space-between">
+                                        <div style="display: flex;;">
+                                            <button class="card-star" >
+                                            <span>
+                                                <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12.1121 4.72554L8.51478 4.17806L6.90666 0.764102C6.86274 0.670629 6.79048 0.594961 6.70122 0.548967C6.47736 0.43324 6.20532 0.529679 6.09339 0.764102L4.48528 4.17806L0.88791 4.72554C0.788731 4.74038 0.698053 4.78934 0.628627 4.86352C0.544696 4.95386 0.498446 5.0754 0.50004 5.20142C0.501634 5.32745 0.550942 5.44766 0.637128 5.53563L3.23987 8.19291L2.62496 11.9452C2.61054 12.0324 2.61976 12.1222 2.65159 12.2043C2.68341 12.2864 2.73655 12.3575 2.805 12.4095C2.87344 12.4616 2.95444 12.4925 3.03882 12.4988C3.1232 12.5051 3.20757 12.4865 3.28238 12.4452L6.50003 10.6736L9.71768 12.4452C9.80553 12.4941 9.90754 12.5104 10.0053 12.4926C10.2518 12.4481 10.4176 12.2033 10.3751 11.9452L9.76019 8.19291L12.3629 5.53563C12.4338 5.46293 12.4805 5.36798 12.4947 5.26412C12.533 5.00447 12.3601 4.76412 12.1121 4.72554Z" fill="#1B1C21"/>
+                                            </svg>
+                                                </span>4.7</button>
+                                            <div class="card-min-outer">
+                                                <button class="card-min">50-79 min</button>
+                                            </div>
+                                        </div>
+                                        <div class="card-add">
+                                            <svg style="left: 25.23%;
+                                            right: 24.32%;
+                                            top: 23.53%;
+                                            bottom: 21.57%;
+                                            " width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M7.59911 7.69607V13.1863M2.04956 7.69607H7.59911H2.04956ZM13.1487 7.69607H7.59911H13.1487ZM7.59911 7.69607V2.20587V7.69607Z" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>                                        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div style="width: 250px;">
+                            <div>
+                                <img src="./images/unsplash_60nzTP7_hMQ.png" style="height :250px; width: 250px;" />                             
+                            </div>
+                            <div style="padding: 15.5px; background-color: white; box-shadow: 0px 0px 1px rgba(187, 187, 187, 0.25);
+                            border-radius: 0px 0px 10px 10px;">
+                                <div style="display: flex; justify-content : space-between">
+                                    <div class="card-heading">
+                                        Home made pizza
+                                    </div>
+                                    <div class="card-price" >
+                                        ₹190
+                                    </div>
+                                </div>
+                                <div style="margin-top: 16px;">
+                                    <div style="display: flex; flex-direction: row; justify-content : space-between">
+                                        <div style="display: flex;;">
+                                            <button class="card-star" >
+                                            <span>
+                                                <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12.1121 4.72554L8.51478 4.17806L6.90666 0.764102C6.86274 0.670629 6.79048 0.594961 6.70122 0.548967C6.47736 0.43324 6.20532 0.529679 6.09339 0.764102L4.48528 4.17806L0.88791 4.72554C0.788731 4.74038 0.698053 4.78934 0.628627 4.86352C0.544696 4.95386 0.498446 5.0754 0.50004 5.20142C0.501634 5.32745 0.550942 5.44766 0.637128 5.53563L3.23987 8.19291L2.62496 11.9452C2.61054 12.0324 2.61976 12.1222 2.65159 12.2043C2.68341 12.2864 2.73655 12.3575 2.805 12.4095C2.87344 12.4616 2.95444 12.4925 3.03882 12.4988C3.1232 12.5051 3.20757 12.4865 3.28238 12.4452L6.50003 10.6736L9.71768 12.4452C9.80553 12.4941 9.90754 12.5104 10.0053 12.4926C10.2518 12.4481 10.4176 12.2033 10.3751 11.9452L9.76019 8.19291L12.3629 5.53563C12.4338 5.46293 12.4805 5.36798 12.4947 5.26412C12.533 5.00447 12.3601 4.76412 12.1121 4.72554Z" fill="#1B1C21"/>
+                                            </svg>
+                                                </span>4.7</button>
+                                            <div class="card-min-outer">
+                                                <button class="card-min">50-79 min</button>
+                                            </div>
+                                        </div>
+                                        <div class="card-add">
+                                            <svg style="left: 25.23%;
+                                            right: 24.32%;
+                                            top: 23.53%;
+                                            bottom: 21.57%;
+                                            " width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M7.59911 7.69607V13.1863M2.04956 7.69607H7.59911H2.04956ZM13.1487 7.69607H7.59911H13.1487ZM7.59911 7.69607V2.20587V7.69607Z" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>                                        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div style="width: 250px;">
+                            <div>
+                                <img src="./images/unsplash_60nzTP7_hMQ.png" style="height :250px; width: 250px;" />                             
+                            </div>
+                            <div style="padding: 15.5px; background-color: white; box-shadow: 0px 0px 1px rgba(187, 187, 187, 0.25);
+                            border-radius: 0px 0px 10px 10px;">
+                                <div style="display: flex; justify-content : space-between">
+                                    <div class="card-heading">
+                                        Home made pizza
+                                    </div>
+                                    <div class="card-price" >
+                                        ₹190
+                                    </div>
+                                </div>
+                                <div style="margin-top: 16px;">
+                                    <div style="display: flex; flex-direction: row; justify-content : space-between">
+                                        <div style="display: flex;;">
+                                            <button class="card-star" >
+                                            <span>
+                                                <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12.1121 4.72554L8.51478 4.17806L6.90666 0.764102C6.86274 0.670629 6.79048 0.594961 6.70122 0.548967C6.47736 0.43324 6.20532 0.529679 6.09339 0.764102L4.48528 4.17806L0.88791 4.72554C0.788731 4.74038 0.698053 4.78934 0.628627 4.86352C0.544696 4.95386 0.498446 5.0754 0.50004 5.20142C0.501634 5.32745 0.550942 5.44766 0.637128 5.53563L3.23987 8.19291L2.62496 11.9452C2.61054 12.0324 2.61976 12.1222 2.65159 12.2043C2.68341 12.2864 2.73655 12.3575 2.805 12.4095C2.87344 12.4616 2.95444 12.4925 3.03882 12.4988C3.1232 12.5051 3.20757 12.4865 3.28238 12.4452L6.50003 10.6736L9.71768 12.4452C9.80553 12.4941 9.90754 12.5104 10.0053 12.4926C10.2518 12.4481 10.4176 12.2033 10.3751 11.9452L9.76019 8.19291L12.3629 5.53563C12.4338 5.46293 12.4805 5.36798 12.4947 5.26412C12.533 5.00447 12.3601 4.76412 12.1121 4.72554Z" fill="#1B1C21"/>
+                                            </svg>
+                                                </span>4.7</button>
+                                            <div class="card-min-outer">
+                                                <button class="card-min">50-79 min</button>
+                                            </div>
+                                        </div>
+                                        <div class="card-add">
+                                            <svg style="left: 25.23%;
+                                            right: 24.32%;
+                                            top: 23.53%;
+                                            bottom: 21.57%;
+                                            " width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M7.59911 7.69607V13.1863M2.04956 7.69607H7.59911H2.04956ZM13.1487 7.69607H7.59911H13.1487ZM7.59911 7.69607V2.20587V7.69607Z" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>                                        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="display: flex; justify-content : center; align-items: center;">
+                        <img src="./icons/play.svg" /> 
+                    </div>
+                </div>
+                <div style="margin-top: 100px;">
+                    <button style="display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 15px 25px;
+                    gap: 10px;
+                    width: 250px;
+                    background: #1AC073;
+                    cursor: pointer;
+                    border-radius: 10px;
+                    border: none;
+                    color : white;
+                    margin-bottom: 82px;"> 
+                    <span style="width: 106px;
+                    height: 20px;
+                    font-family: 'Roboto';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 20px;
+                    letter-spacing: -0.012em;
+                    color: #FFFFFF;
+                    ">Request a Dish</span></button> 
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- SERVICE SECTION -->
+    <div style="display: flex; justify-content: center; align-items: center; background-color: white; flex-direction: column;">
+        <div style="width:750px;
+        height: 114px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 57px;
+        text-align: center;
+        letter-spacing: 0.2px;
+        color: #252B42;
+        margin-top: 100px;
+        ">
+            We are providing best
+            <br />
+            home cooked food delivery service.
+        </div>
+        <div style="width: 447px;
+        height: 40px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+        letter-spacing: 0.2px;
+        color: #737373;">
+            Away from home and craving the tasty homemade recipes? 
+            <br />
+            Choose from a selection of our delicious home cooked dishes 
+        </div>
+        <div style="margin-top: 60px;">
+            <div style="position: relative;">
+                <img src="./icons/play.svg" style="position: absolute; top: 40%; cursor: pointer; z-index: 100; left: 41%;" />
+                <img src="./images/veg.jpg" style="width : 877px; height: 422px; position: relative; " />
+                                    
+            </div>
+        </div>
+        <div style="height: 344px; background: #C7EACC; width: 100%; margin-top: -221px;"></div>
+    </div>
+
+    <!-- CONTACT US -->
+    <div style="background: #F7F8FA; display: flex; padding: 28px 131px 0 131px; justify-content: space-between;">
+        <div>
+            <div style="width: 286px;
+            height: 48px;
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 24px;
+            letter-spacing: -0.012em;
+            color: #101115;
+            ">
+                Do you have a question <br/> or want to become a seller?
+            </div>
+            <div style="
+            width: 317px;
+            height: 20px;
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 20px;
+            letter-spacing: -0.012em;
+            color: #1B1C21;
+            
+            ">
+                Fill this form and our manager will contact you next 48 hours.
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-top: 30px;">
+                <div>
+                    <input style="
+                    width: 300px;
+                    height: 58px;
+                    background: #FFFFFF;
+                    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25);
+                    border-radius: 10px;
+                    border:none;
+                    outline: none;
+                    padding-left : 20px" type="text" placeholder="Your Name" />
+                </div>
+                <div>
+                    <input style="
+                    width: 300px;
+                    height: 58px;
+                    background: #FFFFFF;
+                    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25);
+                    border-radius: 10px;
+                    border:none;
+                    outline: none;
+                    padding-left : 20px" type="text" placeholder="Your e-mail" />
+                </div>
+            </div>
+            <div style="margin-top: 25px;">
+                <textarea style="
+                width: 617px;
+                height: 164px;
+                left: -0.5px;
+                top: 83px;
+                background: #FFFFFF;
+                box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25);
+                border-radius: 10px;
+                outline: none;
+                border : none; padding: 20px;" placeholder="Your message" ></textarea>
+            </div>
+            <div>
+                <button style="display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: flex-start;
+                padding: 19px 25px;
+                gap: 10px;
+                color : white;
+                position: absolute;
+                width: 210px;
+                height: 58px;
+                border: none;
+                background: #1AC073;
+                margin-top : 22px;
+                border-radius: 10px;
+                cursor: pointer;">Submit</button> 
+            </div>
+        </div>
+        <div>
+            <img style="height: 503px; width:402px" src="./icons/Food delivery illustration.svg" />
+        </div>
+    </div>
+
+
+    <!-- FOOTER -->
+    <div class="" style="background : #1AC073; color: white; padding: 28px 131px 0 131px; ">
+        <div style="display: flex; flex-direction: row; justify-content: space-between">
+            <div style="width: 89px;
+            height: 20px;
+            font-family: 'Squada One';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 32px;
+            line-height: 20px;
+            letter-spacing: -0.012em;
+            color: #FFFFFF;">
+                JTGeats
+            </div>
+
+            <div style="
+            display: flex;
+            justify-content: space-between;
+            width: 33%;
+            ">
+            <!-- baad me dekh lena-->
+                <div>
+                    Home
+                </div>
+                <div>
+                    About
+                </div>
+                <div>
+                    Menu
+                </div>
+                <div>
+                    Blog
+                </div>
+                <div>
+                    Contact
+                </div>
+            </div>
+            <div style="display: flex;">
+                <div style="margin-right: 10px;">
+                    <img src="./icons/Facebook.svg" />                       
+                </div>
+                <div>
+                    <img src="./icons/instagram.svg" />                       
+                </div>
+            </div>
+        </div>
+        <svg width="1181" height="2" viewBox="0 0 1181 2" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin: 20px 0 28px 0">
+            <path d="M0 1H1180.5" stroke="white"/>
+        </svg>            
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>
